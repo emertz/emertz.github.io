@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>A-Frame - Image Textures</title>
+	<script src="js/aframe-master.1.0.4.min.js"></script>
+</head>
+
+<body>
+<a-scene antialias="true">
+	
+	<a-assets>
+		<img id="sky" src="images/sky.jpg" crossorigin="anonymous" />
+		<img id="sand" src="images/sand.jpg" crossorigin="anonymous" />
+		<img id="crate" src="images/crate.jpg" crossorigin="anonymous" />
+		<img id="earth" src="images/earth-sphere.jpg" crossorigin="anonymous" />
+		<img id="sandstone" src="images/sandstone.jpg" crossorigin="anonymous" />
+        <img id="smile" src="images/smile.jpg" crossorigin="anonymous" />
+        
+	</a-assets>
+		
+	<a-sky 
+		color = "#FFFFFF"
+		material = "src: #sky">
+	</a-sky>
+
+	<a-plane
+		width="100" height="100"
+		position=" 0.00 0.00 0.00" 
+		rotation="-90 0 0" 
+		color="#888888" 
+		material="src: #sand; repeat:10 10; transparent: true; opacity: 0.75"
+		shadow="cast: false; receive: true">
+	</a-plane>
+	
+	<a-box
+		width = "20" height = "1" depth = "1"
+		position = "-0.5 7.6 -6"
+		rotation = "0 6 3"  
+		color = "#FFFFFF"
+		material = "src: #sandstone"
+		shadow = "cast: true; receive: true">
+	</a-box>
+	
+	<a-sphere
+		radius = "1.25"
+		position = "2 20 -10"
+		material = "src: #earth;"
+		shadow = "cast: true; receive: true">
+	</a-sphere>
+	
+	<a-cylinder
+		radius = ".5" height = "9.5"
+		position = " -11 4.6 -8"
+		color = "#8888BB"
+		material = "src: #sandstone; repeat: 4 2;"
+		shadow = "cast: true; receive: true">
+	</a-cylinder>
+    <a-cylinder
+		radius = ".5" height = "8.9"
+		position = " -5 4.2 -8"
+		color = "#8888BB"
+		material = "src: #sandstone; repeat: 4 2;"
+		shadow = "cast: true; receive: true">
+	</a-cylinder>
+    <a-cylinder
+		radius = ".5" height = "8.5"
+		position = " 0 4 -8"
+		color = "#8888BB"
+		material = "src: #sandstone; repeat: 4 2;"
+		shadow = "cast: true; receive: true">
+	</a-cylinder>
+<a-cylinder
+		radius = ".5" height = "8.5"
+		position = " 5 4 -8"
+		color = "#8888BB"
+		material = "src: #sandstone; repeat: 4 2;"
+		shadow = "cast: true; receive: true">
+	</a-cylinder>
+    <a-box
+		width = ".1" height = "1" depth = "1"
+		position = "-2 1 -1"
+		rotation = "0 6 3"
+        material = "src: #smile; repeat: 1 1;"
+		color = "#FFFFFF"
+		shadow = "cast: true; receive: true">
+	</a-box>
+ 
+  
+	
+ 
+	
+</a-scene>
+</body>
+</html>
