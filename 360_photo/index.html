@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>A-Frame - Image Textures</title>
+	<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+<script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    
+</head>
+
+<body>
+    
+<a-scene antialias="true">
+	
+	<a-assets>
+		<img id="sky" src="images/sky.jpg" crossorigin="anonymous" />
+		<img id="sand" src="images/sand.jpg" crossorigin="anonymous" />
+		<img id="event1" src="images/event1.jpg" crossorigin="anonymous" />
+        <img id="event2" src="images/event2.jpg" crossorigin="anonymous" />
+         <img id="event3" src="images/event3.jpg" crossorigin="anonymous" />
+         <img id="event4" src="images/event4.jpg" crossorigin="anonymous" />
+         <img id="home" src="images/home.jpeg" crossorigin="anonymous" />
+		
+        
+	</a-assets>
+     <a-camera>
+        <a-cursor></a-cursor>
+    </a-camera>
+    
+	<a-sky 
+		color = "#FFFFFF"
+		material = "src: #sky">
+	</a-sky>
+
+    <a-box
+        position="0 1.6 -2"
+        scale=".2 .2 .2"     
+        rotation="0 45 0"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #event1"      
+      ></a-box>
+    
+    <a-box
+        position="-2 1.6 0"
+        scale=".2 .2 .2"     
+        rotation="0 45 0"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #event2"      
+      ></a-box>
+    <a-box
+        position="1 1.6 2"
+        scale=".2 .2 .2"     
+        rotation="0 45 0"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #event3"      
+      ></a-box>
+    <a-box
+        position=" 1.6 2"
+        scale=".2 .2 .2"     
+        rotation="0 45 0"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #event4"      
+      ></a-box>
+    <a-box
+        position="-1 1.5 2"
+        scale=".2 .2 .2"     
+        rotation="0 45 0"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #home"      
+      ></a-box>
+    
+    
+	
+	
+	
+  
+	
+ 
+	
+</a-scene>
+</body>
+</html>
